@@ -29,9 +29,9 @@ public class StatistiqueTest {
         p3 = new Payement(3, 150.0, Instant.parse("2025-09-05T00:00:00Z"));
 
         f1 = new Frais(1, "Inscription", 100.0, Instant.parse("2025-09-10T00:00:00Z"), e1, p1, null);
-        f2 = new Frais(2, "Bibliothèque", 100.0, Instant.parse("2025-09-10T00:00:00Z"), e1, p2, null);
-        f3 = new Frais(3, "Cantine", 100.0, Instant.parse("2025-09-10T00:00:00Z"), e1, null, null);
-        f4 = new Frais(4, "Laboratoire", 100.0, Instant.parse("2025-09-10T00:00:00Z"), e2, p3, null);
+        f2 = new Frais(2, "Reinscription", 100.0, Instant.parse("2025-09-10T00:00:00Z"), e1, p2, null);
+        f3 = new Frais(3, "Journee d'integration", 100.0, Instant.parse("2025-09-10T00:00:00Z"), e1, null, null);
+        f4 = new Frais(4, "Club HEI", 100.0, Instant.parse("2025-09-10T00:00:00Z"), e2, p3, null);
 
         stats = new Statistique();
     }
@@ -42,8 +42,8 @@ public class StatistiqueTest {
         List<Frais> lateFees = stats.getLateFees(Arrays.asList(f1, f2, f3, f4), now);
 
         Assertions.assertEquals(2, lateFees.size());
-        Assertions.assertEquals(true, lateFees.contains(f2));
-        Assertions.assertEquals(true, lateFees.contains(f3));
+        Assertions.assertTrue(lateFees.contains(f2));
+        Assertions.assertTrue(lateFees.contains(f3));
     }
 
     @Test
