@@ -1,11 +1,9 @@
 package antonio.student;
 
-import lombok.AllArgsConstructor;
-
-import java.time.LocalDate;
+import java.time.Instant;
 
 public class PayementEspece extends PayementMobile {
-    public PayementEspece(int id, double montant, LocalDate dateHeurePayement) {
+    public PayementEspece(int id, double montant, Instant dateHeurePayement) {
         super(id, montant, dateHeurePayement);
     }
 }

@@ -3,12 +3,12 @@ package antonio.student;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.time.LocalDate;
+import java.time.Instant;
 
 @AllArgsConstructor
 @Getter
 public class Payement {
     private int id;
     private double montant;
-    private LocalDate dateHeurePayement;
+    private Instant dateHeurePayement;
 }
