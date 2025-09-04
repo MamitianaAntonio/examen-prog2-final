@@ -3,7 +3,7 @@ package antonio.student;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.time.LocalDate;
+import java.time.Instant;
 import java.util.List;
 
 @AllArgsConstructor
@@ -12,6 +12,6 @@ public class Etudiant {
     private int id;
     private String nom;
     private String prenom;
-    private LocalDate dateEntree;
+    private Instant dateEntree;
     private List<Groupe> historiqueGroupe;
 }
